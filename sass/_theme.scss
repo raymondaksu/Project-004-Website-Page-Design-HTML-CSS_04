@@ -408,6 +408,20 @@
 
   .header_right {
     display: inherit;
+    margin-right: 3vw;
+
+    &_ul li {
+        display: inline;
+        padding-left: 18px;
+      }
+  }
+
+  .header_left {
+
+    &_text {
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
   }
 
   #mySidenav {
