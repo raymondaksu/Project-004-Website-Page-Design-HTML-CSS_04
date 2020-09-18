@@ -392,4 +392,8 @@ html, body {
     width: 50%;
     min-width: 350px;
   }
+  .hero_headline {
+    font-size: 1.6rem;
+    height: 130px;
+  }
 }

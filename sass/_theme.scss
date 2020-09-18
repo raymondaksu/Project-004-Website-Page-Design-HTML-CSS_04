@@ -400,4 +400,12 @@
             min-width: 350px;
         }
     }
+
+    .hero {
+      
+        &_headline {
+          font-size: 1.6rem;
+          height: 130px;
+        }
+    }
 }
