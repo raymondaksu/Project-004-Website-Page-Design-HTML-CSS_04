@@ -139,14 +139,24 @@
 
 .newsletter_form {
   display: flex;
-  flex-direction: column;
+  flex-flow: row wrap;
+  align-items: center;
   justify-content: center;
   color: white;
+}
+
+.newsletter_form form {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .newsletter_form input {
   height: 30px;
   width: 250px;
+  margin-right: 2px;
+  margin-top: 2px;
 }
 
 .newsletter_form button {
@@ -155,6 +165,7 @@
   color: white;
   background-color: #a9508b;
   border: none;
+  margin-top: 2px;
 }
 
 .logo {
@@ -360,5 +371,18 @@
   }
   .newsletter_headline h2 {
     margin-block-end: 0;
+  }
+  .newsletter_form form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 440px) {
+  .services_main_boxes {
+    width: 50%;
+    min-width: 350px;
   }
 }

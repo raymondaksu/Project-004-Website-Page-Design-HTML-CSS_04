@@ -130,13 +130,23 @@
 
   &_form {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    align-items: center;
     justify-content: center;
     color: $secondaryTextColor;
+
+    form {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    }
 
     input {
       height: 30px;
       width: 250px;
+      margin-right: 2px;
+      margin-top: 2px;
     }
 
     button {
@@ -145,6 +155,7 @@
       color: $secondaryTextColor;
       background-color: $primaryBackgroundColor;
       border: none;
+      margin-top: 2px;
     }
   }
 }
@@ -367,5 +378,26 @@
         margin-block-end: 0;
       }
     }
+
+    &_form {
+    
+        form {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
   }
+}
+
+@media (max-width: 440px) {
+
+    .services_main {
+    
+        &_boxes {
+            width: 50%;
+            min-width: 350px;
+        }
+    }
 }
