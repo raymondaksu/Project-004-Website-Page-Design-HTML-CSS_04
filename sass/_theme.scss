@@ -45,41 +45,41 @@
 }
 
 #mySidenav {
-    display: none;
+  display: none;
 }
 
-#mySidenav a  {
-    position: absolute; /* Position them relative to the browser window */
-    right: -90px; /* Position them outside of the screen */
-    transition: 0.3s; /* Add transition on hover */
-    padding: 15px; /* 15px padding */
-    width: 100px; /* Set a specific width */
-    text-decoration: none; /* Remove underline */
-    font-size: 20px; /* Increase font size */
-    color: white; /* White text color */
-    border-radius: 5px 0 0 5px; /* Rounded corners on the top right and bottom right side */
-    text-align: end;
-  }
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  right: -90px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 100px; /* Set a specific width */
+  text-decoration: none; /* Remove underline */
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 5px 0 0 5px; /* Rounded corners on the top right and bottom right side */
+  text-align: end;
+}
 
 #mySidenav a:hover {
-    right: 0; /* On mouse-over, make the elements appear as they should */
-  }
+  right: 0; /* On mouse-over, make the elements appear as they should */
+}
 
-  /* The about link: 20px from the top with a green background */
+/* The about link: 20px from the top with a green background */
 #home {
-    top: 20px;
-    background-color: $primaryBackgroundColor;
-  }
-  
+  top: 20px;
+  background-color: $primaryBackgroundColor;
+}
+
 #about {
-    top: 80px;
-    background-color: $primaryBackgroundColor;
-  }
-  
+  top: 80px;
+  background-color: $primaryBackgroundColor;
+}
+
 #services {
-    top: 140px;
-    background-color: $primaryBackgroundColor;
-  }
+  top: 140px;
+  background-color: $primaryBackgroundColor;
+}
 
 .hero {
   display: flex;
@@ -136,10 +136,10 @@
     color: $secondaryTextColor;
 
     form {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
     }
 
     input {
@@ -260,64 +260,62 @@
 }
 
 .services_main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &_boxes {
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    flex-flow: column nowrap;
+    margin-bottom: 5vh;
+    width: 60%;
+    min-width: 440px;
 
-    &_boxes {
-        display: flex;
-        flex-flow: column nowrap;
-        margin-bottom: 5vh;
-        width: 60%;
-        min-width: 440px;
+    &_design,
+    &_maintenance,
+    &_hosting {
+      background-color: $fifthBackgroundColor;
+      padding: 1rem;
+      margin-bottom: 0.5rem;
+      border: 1px rgba($color: #297936, $alpha: 0.3) solid;
+      min-height: 20vh;
+      width: 90%;
+      text-align: justify;
+    }
+  }
 
-        &_design, &_maintenance, &_hosting {
-            background-color: $fifthBackgroundColor;
-            padding: 1rem;
-            margin-bottom: 0.5rem;
-            border: 1px rgba($color: #297936, $alpha: 0.3) solid;
-            min-height: 20vh;
-            width: 90%;
-            text-align: justify;
-        }
+  &_form {
+    background-color: $thirdBackgroundColor;
+    height: fit-content;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: $secondaryTextColor;
+    line-height: 25px;
+    width: 24%;
+    min-width: 230px;
+    margin-bottom: 5vh;
+
+    input {
+      height: 1.5rem;
+      width: 95%;
     }
 
-    &_form {
-        background-color: $thirdBackgroundColor;
-        height: fit-content;
-        padding: 1rem;
-        margin-top: 2rem;
-        color: $secondaryTextColor;
-        line-height: 25px;
-        width: 24%;
-        min-width: 230px;
-        margin-bottom: 5vh;
-
-        input {
-            height: 1.5rem;
-            width: 95%;
-        }
-
-        textarea {
-            resize: none;
-            width: 95%;
-        }
-
-        button {
-            height: 35px;
-            width: 80px;
-            color: $secondaryTextColor;
-            background-color: $primaryBackgroundColor;
-            border: none;
-          }
+    textarea {
+      resize: none;
+      width: 95%;
     }
+
+    button {
+      height: 35px;
+      width: 80px;
+      color: $secondaryTextColor;
+      background-color: $primaryBackgroundColor;
+      border: none;
+    }
+  }
 }
 
-
-
-
-
-@media (max-width: 825px) {
+@media (min-width: 730px) and (max-width: 825px) {
   .hero_headline {
     margin-top: 0;
   }
@@ -348,64 +346,71 @@
     }
   }
 
+  .hero_headline {
+    height: 130px;
+    margin-top: 5vh;
+    font-size: 2rem;
+  }
+
+  .hero_paragraph {
+    margin-top: 10vh;
+  }
+
   .services_main {
     &_boxes {
-        margin-bottom: 0;
+      margin-bottom: 0;
     }
 
     &_form {
-        width: 370px;
+      width: 370px;
     }
-}
+  }
 }
 
 @media (max-width: 910px) {
-    .header_right {
-        display: none;
-    }
+  .header_right {
+    display: none;
+  }
 
-    #mySidenav {
-        display: block;
-    }
+  #mySidenav {
+    display: block;
+  }
 
-    .newsletter {
+  .newsletter {
     min-height: 150px;
 
     &_headline {
-        width: 512px;
-        align-items: center;
+      width: 512px;
+      align-items: center;
       h2 {
         margin-block-end: 0;
       }
     }
 
     &_form {
-    
-        form {
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            align-items: center;
-        }
+      form {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        align-items: center;
+      }
     }
   }
 }
 
 @media (max-width: 440px) {
-
-    .services_main {
-    
-        &_boxes {
-            width: 50%;
-            min-width: 350px;
-        }
+  .services_main {
+    &_boxes {
+      width: 50%;
+      min-width: 350px;
     }
+  }
 
-    .hero {
-      
-        &_headline h1{
-          font-size: 1.6rem;
-          height: 130px;
-        }
-    }
+  .header_right {
+    display: inherit;
+  }
+
+  #mySidenav {
+    display: none;
+  }
 }

@@ -319,7 +319,7 @@
   border: none;
 }
 
-@media (max-width: 825px) {
+@media (min-width: 730px) and (max-width: 825px) {
   .hero_headline {
     margin-top: 0;
   }
@@ -346,6 +346,14 @@
     margin-left: 10%;
     margin-right: 8%;
     margin-block-end: 6vh;
+  }
+  .hero_headline {
+    height: 130px;
+    margin-top: 5vh;
+    font-size: 2rem;
+  }
+  .hero_paragraph {
+    margin-top: 10vh;
   }
   .services_main_boxes {
     margin-bottom: 0;
@@ -385,8 +393,10 @@
     width: 50%;
     min-width: 350px;
   }
-  .hero_headline h1 {
-    font-size: 1.6rem;
-    height: 130px;
+  .header_right {
+    display: inherit;
+  }
+  #mySidenav {
+    display: none;
   }
 }
