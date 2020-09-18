@@ -1,0 +1,371 @@
+@import "_global.scss";
+
+.header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  background-color: $thirdBackgroundColor;
+  min-height: 70px;
+  border-bottom: 4px $primaryBackgroundColor solid;
+
+  &_left {
+    margin-left: 10%;
+    padding: 0.5em;
+
+    &_text {
+      font-weight: 700;
+      font-size: 2rem;
+      color: $secondaryTextColor;
+
+      &_clarusway {
+        color: $primaryTextColor;
+      }
+    }
+  }
+
+  &_right {
+    display: block;
+    margin: 2% 12vw 0 0;
+
+    &_ul li {
+      display: inline;
+      padding-left: 25px;
+    }
+
+    &_ul a {
+      color: $secondaryTextColor;
+      font-size: 1.1rem;
+      text-decoration: none;
+
+      &:hover {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+#mySidenav {
+    display: none;
+}
+
+#mySidenav a  {
+    position: absolute; /* Position them relative to the browser window */
+    right: -90px; /* Position them outside of the screen */
+    transition: 0.3s; /* Add transition on hover */
+    padding: 15px; /* 15px padding */
+    width: 100px; /* Set a specific width */
+    text-decoration: none; /* Remove underline */
+    font-size: 20px; /* Increase font size */
+    color: white; /* White text color */
+    border-radius: 5px 0 0 5px; /* Rounded corners on the top right and bottom right side */
+    text-align: end;
+  }
+
+#mySidenav a:hover {
+    right: 0; /* On mouse-over, make the elements appear as they should */
+  }
+
+  /* The about link: 20px from the top with a green background */
+#home {
+    top: 20px;
+    background-color: $primaryBackgroundColor;
+  }
+  
+#about {
+    top: 80px;
+    background-color: $primaryBackgroundColor;
+  }
+  
+#services {
+    top: 140px;
+    background-color: $primaryBackgroundColor;
+  }
+
+.hero {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-image: url(../img/showcase.jpg);
+  height: 400px;
+
+  &_headline {
+    font-size: 2.8rem;
+    height: 160px;
+    margin-top: 10vh;
+    color: $fourthTextColor;
+  }
+
+  &_headline h1 {
+    text-align: center;
+  }
+
+  &_paragraph {
+    width: 86%;
+    color: $fourthTextColor;
+    text-justify: distribute;
+  }
+
+  &_paragraph p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-block-start: 0;
+    text-align: center;
+    line-height: 25px;
+  }
+}
+
+.newsletter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  background-color: $thirdBackgroundColor;
+  min-height: 100px;
+
+  &_headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $secondaryTextColor;
+  }
+
+  &_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $secondaryTextColor;
+
+    input {
+      height: 30px;
+      width: 250px;
+    }
+
+    button {
+      height: 35px;
+      width: 120px;
+      color: $secondaryTextColor;
+      background-color: $primaryBackgroundColor;
+      border: none;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  &_HTML5_Markup,
+  &_CSS3_Styling,
+  &_Graphic_Design {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 35px;
+
+    p {
+      width: 330px;
+      text-align: center;
+      line-height: 25px;
+    }
+
+    img {
+      height: 100px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-top: 4px $primaryBackgroundColor solid;
+  min-height: 150px;
+
+  &_paragraph {
+    height: 38px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-flow: row nowrap;
+  min-height: 100vh;
+  padding-top: 5vh;
+
+  &_left {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 3%;
+
+    h2 {
+      margin-block-start: 0;
+    }
+
+    &_p1 {
+      margin-block-start: 0;
+      margin-block-end: 0;
+      line-height: 25px;
+      text-align: justify;
+      padding: 0 1rem 1rem 0;
+    }
+
+    &_p2 {
+      background-color: $thirdBackgroundColor;
+      line-height: 25px;
+      padding: 1rem;
+      color: $fourthTextColor;
+      text-align: justify;
+    }
+  }
+
+  &_right {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    height: 40%;
+    margin-right: 10%;
+    background-color: $thirdBackgroundColor;
+    color: $fourthTextColor;
+    padding-right: 2vw;
+
+    h2 {
+      margin-block-start: 2rem;
+      margin-inline-start: 2vw;
+    }
+
+    p {
+      margin-block-start: 0;
+      margin-inline-start: 2vw;
+      margin-block-end: 6vh;
+      line-height: 25px;
+      text-align: justify;
+    }
+  }
+}
+
+.services_main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    &_boxes {
+        display: flex;
+        flex-flow: column nowrap;
+        margin-bottom: 5vh;
+        width: 60%;
+        min-width: 440px;
+
+        &_design, &_maintenance, &_hosting {
+            background-color: $fifthBackgroundColor;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            border: 1px rgba($color: #297936, $alpha: 0.3) solid;
+            min-height: 20vh;
+            width: 90%;
+            text-align: justify;
+        }
+    }
+
+    &_form {
+        background-color: $thirdBackgroundColor;
+        height: fit-content;
+        padding: 1rem;
+        margin-top: 2rem;
+        color: $secondaryTextColor;
+        line-height: 25px;
+        width: 24%;
+        min-width: 230px;
+        margin-bottom: 5vh;
+
+        input {
+            height: 1.5rem;
+            width: 95%;
+        }
+
+        textarea {
+            resize: none;
+            width: 95%;
+        }
+
+        button {
+            height: 35px;
+            width: 80px;
+            color: $secondaryTextColor;
+            background-color: $primaryBackgroundColor;
+            border: none;
+          }
+    }
+}
+
+
+
+
+
+@media (max-width: 825px) {
+  .hero_headline {
+    margin-top: 0;
+  }
+  .hero_paragraph {
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 730px) {
+  .description {
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+
+    &_left {
+      margin-right: 5%;
+    }
+
+    &_right {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 100%;
+      padding-left: 3%;
+      padding-right: 5%;
+      margin-left: 10%;
+      margin-right: 8%;
+      margin-block-end: 6vh;
+    }
+  }
+
+  .services_main {
+    &_boxes {
+        margin-bottom: 0;
+    }
+
+    &_form {
+        width: 370px;
+    }
+}
+}
+
+@media (max-width: 910px) {
+    .header_right {
+        display: none;
+    }
+
+    #mySidenav {
+        display: block;
+    }
+
+    .newsletter {
+    min-height: 150px;
+
+    &_headline {
+        width: 512px;
+        align-items: center;
+      h2 {
+        margin-block-end: 0;
+      }
+    }
+  }
+}
